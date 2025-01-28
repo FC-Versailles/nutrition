@@ -95,10 +95,10 @@ data['Poids'] = data['Poids'].astype(float)
 data['MG %'] = data['MG %'].astype(float)
 
 # Sidebar navigation
-st.sidebar.title("Navigation")
-page = st.sidebar.radio("Go to", ["Overview", "Joueurs"])
+st.sidebar.title("Nutrition")
+page = st.sidebar.radio("", ["Equipe", "Joueurs"])
 
-if page == "Overview":
+if page == "Equipe":
     st.title("FC Versailles - Nutrition")
 
     st.markdown("#### Choisir la date")
@@ -142,7 +142,7 @@ if page == "Overview":
             table_height = max(400, num_rows * row_height)  # Minimum height of 400px
 
             # Display the styled table
-            st.markdown(f"Suivi des Poids et MG % ({selected_date})")
+            st.markdown(f"#### Suivi des Poids et MG % ({selected_date})")
             st.dataframe(styled_table, use_container_width=True, height=table_height)
         else:
             st.warning("No data available for the selected date.")
