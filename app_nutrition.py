@@ -113,7 +113,6 @@ st.sidebar.title("Nutrition")
 page = st.sidebar.radio("", ["Equipe", "Joueurs"])
 
 if page == "Equipe":
-    st.title("FC Versailles - Nutrition")
 
     st.markdown("#### Choisir la date")
     if not data.empty:
@@ -164,7 +163,7 @@ if page == "Equipe":
         st.warning("No available dates with data.")
 
 elif page == "Joueurs":
-    st.title("FC Versailles - Nutrition")
+
 
     # Filter by player name (Nom)
     player_names = data['Nom'].dropna().unique()
