@@ -113,7 +113,7 @@ st.sidebar.title("Nutrition")
 page = st.sidebar.radio("", ["Equipe", "Joueurs"])
 
 if page == "Equipe":
-
+    st.title("Etat de l'équipe")
     st.markdown("#### Choisir la date")
     if not data.empty:
         min_date = data['Date'].min().date()
@@ -163,8 +163,7 @@ if page == "Equipe":
         st.warning("No available dates with data.")
 
 elif page == "Joueurs":
-
-
+    st.title("Fiche Joueur")
     # Filter by player name (Nom)
     player_names = data['Nom'].dropna().unique()
     selected_player = st.selectbox("Select a player:", options=player_names)
