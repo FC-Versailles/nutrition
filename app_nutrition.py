@@ -110,7 +110,7 @@ data['MG %'] = data['MG %'].astype(float)
 
 # Sidebar navigation
 st.sidebar.title("Nutrition")
-page = st.sidebar.radio("", ["Equipe", "Joueurs"])
+page = st.sidebar.selectbox("Select Page", ["Equipe", "Joueurs"])
 
 if page == "Equipe":
     st.title("Etat de l'équipe")
